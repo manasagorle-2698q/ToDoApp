@@ -86,7 +86,7 @@ pipeline {
 
                         echo "🧹 Cleaning old dependencies..."
 
-                        cd ToDoApp
+                        cd Netlify
 
                         rm -rf node_modules package-lock.json
 
@@ -112,7 +112,7 @@ pipeline {
 
                         echo "🧪 Running test cases..."
 
-                        cd ToDoApp
+                        cd Netlify
 
                         npm test || { echo "❌ Tests failed"; exit 1; }
 
@@ -136,7 +136,7 @@ pipeline {
 
                     sh '''
 
-                        cd ToDoApp
+                        cd Netlify
  
                         # Set GitHub credentials to authenticate
 
@@ -207,7 +207,7 @@ https://api.github.com/repos/manasagorle-2698q/ToDoApp/pulls \
 
                     sh '''
 
-                        cd ToDoApp
+                        cd Netlify
 
                         while true; do
 
@@ -268,7 +268,7 @@ https://api.github.com/repos/manasagorle-2698q/ToDoApp/pulls \
 
                         # Ensure you're on the prod branch and have the latest code
 
-                        cd ToDoApp
+                        cd Netlify
 
                         git checkout prod
 
